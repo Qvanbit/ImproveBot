@@ -38,7 +38,7 @@ func main() {
 		if isStartMessage(&update) {
 			log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text+"lol")
 			msg.ReplyToMessageID = update.Message.MessageID
 
 			gBot.Send(msg)
